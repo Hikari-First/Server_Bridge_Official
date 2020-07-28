@@ -1,1 +1,1 @@
-Repository of the official bot "Server bridge" discord
+Repository of the official bot "Server Bridge" discord
