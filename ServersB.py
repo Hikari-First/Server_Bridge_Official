@@ -40,10 +40,6 @@ async def on_message(message):
             embed = discord.Embed(title="Новый канал добавлен успешно", color= color)
             await message.channel.send(content=None, embed=embed)
             return channels
-            
-    
-    if message.content.startswith('!inf'):
-        await message.channel.send(channels)
     
     if message.channel.id == ch1:
         count = len(channels)
