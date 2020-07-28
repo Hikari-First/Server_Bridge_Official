@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 from discord.ext.commands import Bot
+import os
 
 client = discord.Client(command_prefix='')
 channels = []
@@ -68,4 +69,4 @@ async def on_message(message):
         embed.add_field(name="Дешифровка прошла успешно", value= a)
         await message.channel.send(content=None, embed=embed)
 
-client.run('')
+token = os.environ.get('BOT_TOKEN')
