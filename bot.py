@@ -57,10 +57,6 @@ async def on_message(message):
                 await channel.send(content=None, embed=embed)
                 i = i + 1
 
-    if message.author == client.user:
-        return
-    
-    if message.content.startswith('!channel'):
         if message.channel.id in channels:
             print('Element in list')
             channel = client.get_channel(ch1)
