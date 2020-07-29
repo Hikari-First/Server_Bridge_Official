@@ -41,12 +41,12 @@ async def on_message(message):
             embed = discord.Embed(title="Новый канал добавлен успешно", color= color)
             await message.channel.send(content=None, embed=embed)
             return channels
-    if message.content.startswith(''):
+
         if message.channel.id == ch1:
             count = len(channels)
             await message.channel.send(count)
             i = 0
-            while i < count:
+            while i <=count:
                 await message.channel.send(channels[i])
                 channel_id = int(channels[i])
                 channel = client.get_channel(channel_id)
@@ -57,14 +57,14 @@ async def on_message(message):
                 await channel.send(content=None, embed=embed)
                 i = i + 1
 
-        if message.channel.id in channels:
-            print('Element in list')
-            channel = client.get_channel(ch1)
-            a = message.content
-            embed = discord.Embed(title="Было принято сообщение: ")
-            embed.set_author(name = message.author.name,icon_url = message.author.avatar_url)
-            embed.add_field(name="Дешифровка прошла успешно", value= a)
-            await message.channel.send(content=None, embed=embed)
+    if message.channel.id in channels:
+        print('Element in list')
+        channel = client.get_channel(ch1)
+        a = message.content
+        embed = discord.Embed(title="Было принято сообщение: ")
+        embed.set_author(name = message.author.name,icon_url = message.author.avatar_url)
+        embed.add_field(name="Дешифровка прошла успешно", value= a)
+        await message.channel.send(content=None, embed=embed)
 
 token = os.environ.get('BOT_TOKEN')
 client.run(token)
