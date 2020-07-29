@@ -57,14 +57,14 @@ async def on_message(message):
                 await channel.send(content=None, embed=embed)
                 i = i + 1
 
-    if message.channel.id in channels:
-        print('Element in list')
-        channel = client.get_channel(ch1)
-        a = message.content
-        embed = discord.Embed(title="Было принято сообщение: ")
-        embed.set_author(name = message.author.name,icon_url = message.author.avatar_url)
-        embed.add_field(name="Дешифровка прошла успешно", value= a)
-        await message.channel.send(content=None, embed=embed)
+    #if message.channel.id in channels:
+        #print('Element in list')
+        #channel = client.get_channel(ch1)
+        #a = message.content
+        #embed = discord.Embed(title="Было принято сообщение: ")
+        #embed.set_author(name = message.author.name,icon_url = message.author.avatar_url)
+        #embed.add_field(name="Дешифровка прошла успешно", value= a)
+        #await message.channel.send(content=None, embed=embed)
 
 token = os.environ.get('BOT_TOKEN')
 client.run(token)
