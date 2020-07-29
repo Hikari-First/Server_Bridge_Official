@@ -46,7 +46,7 @@ async def on_message(message):
             count = len(channels)
             await message.channel.send(count)
             i = 0
-            while i <=count:
+            while i < count:
                 await message.channel.send(channels[i])
                 channel_id = int(channels[i])
                 channel = client.get_channel(channel_id)
