@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 from discord.ext.commands import Bot
+import time
 import os
 
 client = discord.Client(command_prefix='')
