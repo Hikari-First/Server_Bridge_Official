@@ -17,6 +17,16 @@ async def on_message(message):
     if message.author == client.user:
         return
     
+    if message.content == "!time":
+        user = message.author
+        embed = discord.Embed(title="Время")
+        embed.add_field(name="Сейчас", value=now)
+        if message.channel.type == discord.ChannelType.private:
+            await user.send(content=None, embed=embed)
+        else:
+            await message.delete()
+            await user.send(content=None, embed=embed)
+    
     if message.content.startswith('!color'):
         item = (str(message.content).replace('!color', ''))
         colour = (str(item).replace(' ', ''))
